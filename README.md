@@ -8,5 +8,5 @@
 		}
 	}
 dependencies {
-	        implementation 'com.github.Wiser-Wong:WheelView:1.0.1'
+	        implementation 'com.github.Wiser-Wong:WheelView:1.0.2'
 	}
