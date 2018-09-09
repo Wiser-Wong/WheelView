@@ -272,8 +272,6 @@ public class WheelView<T> extends View implements Runnable {
 
 	private boolean						isSmoothScroll					= false;
 
-	private boolean						isTouchUp;
-
 	public WheelView(Context context) {
 		this(context, null);
 	}
@@ -988,7 +986,6 @@ public class WheelView<T> extends View implements Runnable {
 					mOverScroller.startScroll(0, mScrollOffsetY, 0, scrollRange);
 				}
 
-				isTouchUp = true;
 				invalidateIfYChanged();
 				ViewCompat.postOnAnimation(this, this);
 
@@ -1055,10 +1052,7 @@ public class WheelView<T> extends View implements Runnable {
 			observeItemChanged();
 			invalidate();
 		}
-		if (isTouchUp) {
-			if (mOnItemSelectedListener != null) mOnItemSelectedListener.onItemSelected(this, mDataList.get(mCurrentScrollPosition), mCurrentScrollPosition);
-			isTouchUp = false;
-		}
+		if (mOnItemSelectedListener != null) mOnItemSelectedListener.onItemSelected(this, mDataList.get(mCurrentScrollPosition), mCurrentScrollPosition);
 	}
 
 	/**
