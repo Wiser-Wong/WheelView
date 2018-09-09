@@ -1052,6 +1052,7 @@ public class WheelView<T> extends View implements Runnable {
 			observeItemChanged();
 			invalidate();
 		}
+		mSelectedItemPosition = mCurrentScrollPosition;
 		if (mOnItemSelectedListener != null) mOnItemSelectedListener.onItemSelected(this, mDataList.get(mCurrentScrollPosition), mCurrentScrollPosition);
 	}
 
@@ -2169,7 +2170,7 @@ public class WheelView<T> extends View implements Runnable {
 	 */
 	public void setOnItemSelectedListener(OnItemSelectedListener<T> onItemSelectedListener) {
 		mOnItemSelectedListener = onItemSelectedListener;
-		setSelectedItemPosition(selectItemPosition, isSmoothScroll, 0);
+		setSelectedItemPosition(mSelectedItemPosition, isSmoothScroll, 0);
 	}
 
 	/**
