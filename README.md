@@ -12,4 +12,4 @@
 	}
 ### 截图
 
-![images](https://github.com/Wiser-Wong/WheelView/blob/master/images/wheel.png)
+![images](https://github.com/Wiser-Wong/WheelView/blob/master/images/wheel.gif)
