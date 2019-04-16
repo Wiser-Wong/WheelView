@@ -10,3 +10,6 @@
     dependencies {
 	        implementation 'com.github.Wiser-Wong:WheelView:1.0.2'
 	}
+### 截图
+
+![images](https://github.com/Wiser-Wong/WheelView/blob/master/images/wheel.png)
