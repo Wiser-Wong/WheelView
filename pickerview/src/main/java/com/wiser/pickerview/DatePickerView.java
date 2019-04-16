@@ -1,10 +1,5 @@
 package com.wiser.pickerview;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
-
-import com.wiser.wheel.WheelView;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -20,14 +15,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.wiser.wheel.WheelView;
+
 /**
  * @author Wiser
- * 
+ *
  *         日期 选择View
  */
 public class DatePickerView extends LinearLayout implements WheelView.OnItemSelectedListener<Integer> {
-
-	private static final SimpleDateFormat	SDF	= new SimpleDateFormat("yyyy-M-d", Locale.getDefault());
 
 	private YearWheelView					mYearWv;
 
@@ -61,7 +56,7 @@ public class DatePickerView extends LinearLayout implements WheelView.OnItemSele
 
 	/**
 	 * 初始化年月日视图
-	 * 
+	 *
 	 * @param isHasLabel
 	 */
 	public void initDatePickerView(boolean isHasLabel) {
